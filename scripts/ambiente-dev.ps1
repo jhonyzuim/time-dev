@@ -47,7 +47,7 @@ $lista = @(
   @("essencial",   "Windows Terminal", "wt",      "",          "Microsoft.WindowsTerminal",   "Abas e perfis de terminal"),
   @("essencial",   "Claude Code",      "claude",  "--version", "",                            "O próprio Time Dev"),
   @("recomendado", "pnpm",             "pnpm",    "--version", "pnpm.pnpm",                   "Gerenciador de pacotes JS rápido"),
-  @("recomendado", "DBeaver",          "",        "",          "dbeaver.dbeaver",             "Cliente visual de banco de dados (MySQL, Postgres, SQL Server...)"),
+  @("recomendado", "DBeaver",          "",        "",          "DBeaver.DBeaver.Community",             "Cliente visual de banco de dados (MySQL, Postgres, SQL Server...)"),
   @("recomendado", "Bruno",            "",        "",          "Bruno.Bruno",                 "Testar APIs (alternativa leve ao Postman, salva em arquivos no Git)"),
   @("recomendado", "7-Zip",            "",        "",          "7zip.7zip",                   "Compactar e extrair arquivos"),
   @("opcional",    "Docker Desktop",   "docker",  "--version", "Docker.DockerDesktop",        "Bancos e serviços em contêiner (exige WSL, pesado)"),
