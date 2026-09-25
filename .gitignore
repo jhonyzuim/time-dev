@@ -12,3 +12,6 @@ node_modules/
 
 # Arquivos temporários do Office (quando a minuta .docx está aberta)
 ~$*
+
+# Relatórios gerados por máquina (não versionar)
+relatorios/

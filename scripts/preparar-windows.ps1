@@ -13,6 +13,10 @@
 
 param([string]$GitHub = "")
 
+if ($GitHub -and $GitHub -notmatch '^https://github\.com/[^/]+/[^/]+?(\.git)?$') {
+  throw "Endereço do GitHub inválido: '$GitHub'. Use o formato https://github.com/usuario/repositorio.git"
+}
+
 $ErrorActionPreference = "Stop"
 $Raiz = Split-Path -Parent $PSScriptRoot
 Set-Location $Raiz
@@ -85,7 +89,8 @@ if ($GitHub) {
   Passo "Enviando para o GitHub"
   if (git remote) { git remote set-url origin $GitHub } else { git remote add origin $GitHub }
   git push -u origin main --tags
-  Ok "Enviado para $GitHub"
+  if ($LASTEXITCODE -eq 0) { Ok "Enviado para $GitHub" }
+  else { Aviso "O envio falhou (veja a mensagem acima). O time será instalado mesmo assim; depois rode: git push -u origin main --tags" }
 } else {
   Aviso "GitHub não informado. Depois, rode:  git remote add origin <url> ; git push -u origin main --tags"
 }

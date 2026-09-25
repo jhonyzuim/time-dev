@@ -38,10 +38,18 @@ Time Dev/
 
 ## Instalação
 
-Pré-requisitos: [Claude Code](https://docs.claude.com/en/docs/claude-code/setup), [Node.js](https://nodejs.org) e [Git](https://git-scm.com).
+### Primeira vez (Windows, tudo de uma vez)
 
 ```powershell
 cd "C:\Users\jzuim\OneDrive\Documentos\IA\Time Dev"
+powershell -ExecutionPolicy Bypass -File scripts\preparar-windows.ps1 -GitHub https://github.com/<usuario>/time-dev.git
+```
+
+Instala Git, Node.js e Claude Code se faltarem, cria o repositório Git (commit inicial + tag `v1.0`), envia para o GitHub e instala o time. Sem `-GitHub`, faz tudo menos o envio.
+
+### Atualizar o time depois de editar algo
+
+```powershell
 node scripts/instalar.js --simular   # mostra o que vai fazer
 node scripts/instalar.js             # instala em C:\Users\jzuim\.claude
 ```
