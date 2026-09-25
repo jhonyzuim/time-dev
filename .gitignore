@@ -1,0 +1,14 @@
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Arquivos temporários do Office (quando a minuta .docx está aberta)
+~$*
